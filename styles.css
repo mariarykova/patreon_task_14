@@ -13,7 +13,7 @@
 }
 
 .main {
-    /* background-image: url('./images/circles_main.svg'); */
+    /* background-image: url('circles_main.svg'); */
   background-repeat: no-repeat;
   background-position: right;
   display: block;
@@ -186,7 +186,7 @@
 .tariffs__items.active {
   background-color: #5175FF;
   color: #FFFFFF;
-  background-image: url('./images/circles_tariffs.png');
+  background-image: url('circles_tariffs.png');
 }
 
 .tariffs__items.active .tariffs__type, .tariffs__items.active .tariffs__price {
@@ -203,7 +203,7 @@
 }
 
 .footer {
-  background-image: url('./images/circles_footer.png');
+  background-image: url('circles_footer.png');
   background-repeat: no-repeat;
   height: 600px;
   background-color: #25293A;
@@ -348,7 +348,7 @@
 
   .main__intro_images {
     display: block;
-    background-image: url('./images/img_main.png');
+    background-image: url('img_main.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 171px;
