@@ -12,28 +12,127 @@
   background-color: #F2F2F2;
 }
 
+/* CIRCLES */
+
+.wrp {
+  position: absolute;
+  width: 100%;
+  height: 566px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  margin-top: 20px;
+  width: 566px;
+  height: 566px;
+  border-radius: 50%;
+  border: 1px solid rgb(116, 116, 149, 0.25);
+  top: -50%;
+  right: -12%;
+}
+
+.ball {
+  margin: calc(50% - 10px) auto 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #D8DAE0;
+  animation: spin 7s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn) translateY(-293px) translateY(50%) rotate(1turn)
+  }
+  to {
+    transform: rotate(1turn) translateY(-293px) translateY(50%) rotate(0turn);
+  }
+}
+
+.wrp_two {
+  position: absolute;
+  width: 100%;
+  height: 712px;
+  overflow: hidden;
+}
+
+.circle_two {
+  position: absolute;
+  margin-top: 20px;
+  width: 712px;
+  height: 712px;
+  border-radius: 50%;
+  border: 1px solid rgb(116, 116, 149, 0.25);
+  top: -50%;
+  right: -17%;
+}
+
+.ball_two {
+  margin: calc(50% - 10px) auto 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #D8DAE0;
+  animation: spin_two 7s infinite linear;
+}
+
+@keyframes spin_two {
+  from {
+    transform: rotate(1turn) translateY(-365px) translateY(50%) rotate(0turn)
+  }
+  to {
+    transform: rotate(0turn) translateY(-365px) translateY(50%) rotate(1turn);
+  }
+}
+
+.wrp_three {
+  position: absolute;
+  width: 100%;
+  height: 1134px;
+  overflow: hidden;
+}
+
+.circle_three {
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  margin-top: 20px;
+  width: 1134px;
+  height: 1134px;
+  border-radius: 50%;
+  border: 1px solid rgb(116, 116, 149, 0.25);
+}
+
+.ball_three {
+  margin: calc(50% - 10px) auto 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #D8DAE0;
+  animation: spin_three 10s infinite linear;
+}
+
+@keyframes spin_three {
+  from {
+    transform: rotate(0turn) translateY(-575px) translateY(50%) rotate(1turn)
+  }
+  to {
+    transform: rotate(1turn) translateY(-575px) translateY(50%) rotate(0turn);
+  }
+}
+
 .main {
+    /* background-image: url('./images/circles_main.svg'); */
   background-repeat: no-repeat;
   background-position: right;
   display: block;
   margin: 0 auto;
   padding-top: 85px;
-  margin-bottom: 185px;
 }
 
-.main_bcg_image {
-  /* animation: 1s linear 0s normal none infinite running rot; */
-  /* -webkit-animation: 30s linear 0s normal none infinite running rot; */
-  top: 0;
-  right: 0;
-}
-@keyframes rot {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.main__img_mobile {
+  display: none;
 }
 
 .logo {
@@ -118,9 +217,9 @@
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
-  margin-bottom: 82px;
   position: relative;
   z-index: 20;
+  transform: translateY(30%);
 }
 
 .tariffs__items {
@@ -185,7 +284,10 @@
 .tariffs__items.active {
   background-color: #5175FF;
   color: #FFFFFF;
-  background-image: url('circles_tariffs.png');
+  background-image: url('./images/circles_tariffs.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tariffs__items.active .tariffs__type, .tariffs__items.active .tariffs__price {
@@ -201,8 +303,8 @@
   color: #829CFF
 }
 
-.footer {
-  background-image: url('circles_footer.png');
+.counter {
+  background-image: url('./images/circles_footer.png');
   background-repeat: no-repeat;
   height: 600px;
   background-color: #25293A;
@@ -210,10 +312,9 @@
   align-items: center;
   position: relative;
   z-index: 10;
-  margin-top: -20%;
 }
 
-.footer__intro {
+.counter__intro {
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
@@ -223,7 +324,7 @@
   padding-top: 150px;
 }
 
-.footer__title {
+.counter__title {
   font-weight: bold;
   font-size: 16px;
   line-height: 48px;
@@ -255,6 +356,7 @@
   background: #333950;
   border-radius: 13px;
   display: inline-block;
+  width: 100px;
 }
  
 .countdown-text {
@@ -281,7 +383,66 @@
   display: none;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1025px) { 
+
+  .wrp {
+    height: 332px;
+  }
+
+  .circle {
+    height: 332px;
+    width: 332px;
+    top: -35%;
+    right: -10%;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0turn) translateY(-173px) translateY(50%) rotate(1turn)
+    }
+    to {
+      transform: rotate(1turn) translateY(-173px) translateY(50%) rotate(0turn);
+    }
+  }
+
+  .wrp_two {
+    height: 418px;
+  }
+
+  .circle_two {
+    height: 418px;
+    width: 418px;
+    top: -38%;
+    right: -14%;
+  }
+
+  @keyframes spin_two {
+    from {
+      transform: rotate(1turn) translateY(-217px) translateY(50%) rotate(0turn)
+    }
+    to {
+      transform: rotate(0turn) translateY(-217px) translateY(50%) rotate(1turn);
+    }
+  }
+
+  .wrp_three {
+    height: 666px;
+  }
+
+  .circle_three {
+    height: 666px;
+    width: 666px;
+  }
+
+  @keyframes spin_three {
+    from {
+      transform: rotate(0turn) translateY(-343px) translateY(50%) rotate(1turn)
+    }
+    to {
+      transform: rotate(1turn) translateY(-343px) translateY(50%) rotate(0turn);
+    }
+  }
+
   .main__intro {
     max-width: 900px;
   }
@@ -293,6 +454,11 @@
   .tariffs {
     max-width: 850px;
     flex-direction: column;
+    transform: translateY(10%);
+  }
+
+  .tariffs__items.active {
+    background-image: url('./images/citcle_tariffs_tablet.png');
   }
 
   .tariffs__items {
@@ -307,7 +473,14 @@
     align-items: center;
   }
 
-  .footer__intro {
+  .counter {
+    background-image: url('./images/circles_counter.png');
+    background-position: bottom;
+    background-size: cover;
+    height: 986px;
+  }
+
+  .counter__intro {
     max-width: 850px;
     flex-direction: column;
   }
@@ -319,9 +492,18 @@
 
 @media screen and (max-width: 415px) {
 
-  
+  .wrp, .wrp_two, .wrp_three {
+    display: none;
+  }
+
+  .main__img_mobile {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
   .main {
-    padding-top: 85px;
+    padding-top: 60px;
     margin-bottom: 70px;
   }
   
@@ -347,7 +529,7 @@
 
   .main__intro_images {
     display: block;
-    background-image: url('img_main.png');
+    background-image: url('./images/img_main.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 171px;
@@ -388,6 +570,10 @@
 
   .tariffs__items {
     text-align: center;
+  }
+
+  .tariffs__items.active {
+    background-image: url(./images/circles_tariffs.png);
   }
 
   .tarrifs__items_content{
@@ -432,16 +618,15 @@
  
  
 
-  .footer {
+  .counter {
     height: 100vh;
-    margin-top: -85%;
   }
   
-  .footer__intro {
+  .counter__intro {
     max-width: 300px;
   }
   
-  .footer__title {
+  .counter__title {
     font-size: 16px;
     line-height: 48px;
   }
@@ -450,18 +635,19 @@
   /* TIME COUNTER */
   
   .countdown {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 38px;
     gap: 13px;
   }
    
   .countdown-number {
     padding: 5px;
+    width: 60px;
   }
    
   .countdown-text {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 12px;
+    line-height: 22px;
   }
   
 }

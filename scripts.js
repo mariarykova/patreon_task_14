@@ -6,6 +6,9 @@ function getTimeRemaining(endtime) {
     let minutes = Math.floor((t / 1000 / 60) % 60);
     let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
     let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    if (days >= 100) {
+      days = 90;
+    }
     return {
       'total': t,
       'days': days,
@@ -31,6 +34,8 @@ function getTimeRemaining(endtime) {
         clearInterval(timeinterval);
         return true;
       }
+
+
   
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -46,5 +51,5 @@ function getTimeRemaining(endtime) {
     let timeinterval = setInterval(updateClock, 1000);
   }
   
-    let deadline = 'November 04 2021'
+  let deadline = 'November 04 2021'
   initializeClock('countdown', deadline);
